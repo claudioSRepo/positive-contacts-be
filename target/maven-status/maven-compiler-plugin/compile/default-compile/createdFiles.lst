@@ -1,0 +1,7 @@
+it\cs\contact\tracing\be\model\LambdaResponse$LambdaResponseBuilder.class
+it\cs\contact\tracing\be\model\Contact$ContactBuilder.class
+it\cs\contact\tracing\be\model\LambdaResponse.class
+it\cs\contact\tracing\be\model\Contact.class
+it\cs\contact\tracing\be\utils\Util.class
+it\cs\contact\tracing\be\dao\PositiveContactsDao.class
+it\cs\contact\tracing\be\Handler.class
