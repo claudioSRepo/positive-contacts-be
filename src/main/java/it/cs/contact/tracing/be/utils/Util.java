@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("unused")
 public class Util {
 
 	private static final Logger logger = LoggerFactory.getLogger(Util.class);
@@ -71,6 +72,10 @@ public class Util {
 		}
 	}
 
+	public static boolean isValidDate(final Integer date) {
+
+		return isValidDate(String.valueOf(date));
+	}
 
 	public static boolean isValidDate(final String date) {
 
