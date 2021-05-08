@@ -1,8 +1,0 @@
-it\cs\contact\tracing\be\utils\Util.class
-it\cs\contact\tracing\be\entity\Contact$ContactBuilder.class
-it\cs\contact\tracing\be\dto\LambdaResponse$LambdaResponseBuilder.class
-it\cs\contact\tracing\be\dto\LambdaResponse.class
-it\cs\contact\tracing\be\entity\Contact.class
-it\cs\contact\tracing\be\Handler$1.class
-it\cs\contact\tracing\be\repository\PositiveContactsRepository.class
-it\cs\contact\tracing\be\Handler.class
