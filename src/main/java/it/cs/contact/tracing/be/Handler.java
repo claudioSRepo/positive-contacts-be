@@ -14,7 +14,7 @@ import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
+import static it.cs.contact.tracing.be.utils.Util.getFirst;
 
 public class Handler implements RequestHandler<APIGatewayProxyRequestEvent, LambdaResponse> {
 
@@ -73,8 +73,9 @@ public class Handler implements RequestHandler<APIGatewayProxyRequestEvent, Lamb
 
 		final String key = event.getPathParameters().getOrDefault("deviceKey", "");
 
-		final List<Contact> positiveContactEntities = positiveContactsRepository.getPositiveContactByDeviceKey(key);
+		final Contact positiveContactEntity =
+				getFirst(positiveContactsRepository.getPositiveContactByDeviceKey(key)).orElse(new Contact());
 
-		return LambdaResponse.builder().statusCode(HttpStatus.SC_OK).body(gson.toJson(positiveContactEntities)).build();
+		return LambdaResponse.builder().statusCode(HttpStatus.SC_OK).body(gson.toJson(positiveContactEntity)).build();
 	}
 }

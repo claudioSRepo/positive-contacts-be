@@ -49,20 +49,20 @@ public class PositiveContactsRepository {
 		}
 	}
 
-	public boolean create(final Contact contactEntity) {
+	public Contact create(final Contact contactEntity) {
 
 		logger.info("Create contactEntity: {}", contactEntity.getDeviceKey());
 
 		try {
 
 			if (contactEntity.isValid()) {
-				dbMapper.save(contactEntity);
-				return true;
+
+				return dbMapper.save(contactEntity);
 			}
 		}
 		catch (final Exception e) {
 			logger.error("Error creating contactEntity.", e);
 		}
-		return false;
+		return new Contact();
 	}
 }
